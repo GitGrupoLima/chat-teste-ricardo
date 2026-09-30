@@ -25,7 +25,7 @@ Categorias possíveis:
   ERP, relógio de ponto físico, calendários, API, exportação e importação de arquivos).
 - duvida: perguntas sobre como usar o TimeTrack, planos, preços e regras de funcionamento.
 - bug: o sistema se comporta de forma errada (erro na tela, app que fecha ou trava, botão que
-  não funciona, registros que somem sozinhos, lentidão ou sistema fora do ar).
+  não funciona, sistema que apaga registros repetidamente, lentidão ou sistema fora do ar).
 - feature: pedido de funcionalidade nova ou de melhoria em algo que já funciona, inclusive
   perguntas do tipo "vocês teriam X?" sobre algo que o produto não oferece (ex.: app para
   outro dispositivo).
@@ -142,8 +142,10 @@ Classificações corrigidas pelo responsável. Siga o mesmo padrão em casos par
   <entrada>Quem ganhou o jogo de ontem?</entrada>
   {"categoria": "fora_de_escopo", "urgencia": "baixa", "confianca": "alta", "resumo": "Pergunta sem relação com o TimeTrack"}
 
-- dados ou bug: um registro específico errado é dados; o sistema calculando errado para todos
-  ou apagando registros sozinho é bug.
+- dados ou bug: registros específicos errados ou faltando são dados, mesmo que sejam muitos
+  (ex.: "sumiram os lançamentos de setembro da minha equipe"). É bug quando o usuário descreve
+  um comportamento do sistema que se repete ou afeta todos (ex.: "o sistema some os pontos
+  depois de algumas horas", o cálculo errado para todos depois de uma atualização).
   <entrada>O banco de horas de toda a equipe dobrou depois da atualização de ontem.</entrada>
   {"categoria": "bug", "urgencia": "alta", "confianca": "media", "resumo": "Banco de horas da equipe dobrou após a atualização de ontem"}
 
