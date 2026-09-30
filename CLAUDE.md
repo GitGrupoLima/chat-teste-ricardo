@@ -29,3 +29,8 @@ Converse com o usuário sempre em português do Brasil.
 
 - Nunca coloque chaves, senhas ou tokens no código. Use variáveis de ambiente
   (`.env.local`, que já é ignorado pelo Git).
+
+## Git
+
+- Ao terminar uma tarefa e o `npm run build` passar, faça o commit e envie direto para a `main`
+  também (além da branch de trabalho), sem perguntar.
