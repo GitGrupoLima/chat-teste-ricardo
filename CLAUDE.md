@@ -10,6 +10,8 @@ Converse com o usuário sempre em português do Brasil.
 - Next.js 15 (App Router), código em `src/`.
 - TypeScript estrito (`"strict": true` no `tsconfig.json`). Nunca use `any`.
 - Tailwind CSS puro. Não use bibliotecas de componentes (shadcn/ui, MUI, Chakra etc.).
+- A tela tem modo claro e escuro (classe `dark` no `<html>`). Todo componente novo precisa das
+  classes `dark:` correspondentes.
 
 ## Idiomas
 

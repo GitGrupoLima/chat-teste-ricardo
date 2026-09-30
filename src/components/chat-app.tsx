@@ -141,7 +141,7 @@ export function ChatApp() {
   const isTyping = (pendingReplies[selectedConversation.id] ?? 0) > 0;
 
   return (
-    <div className="flex h-dvh overflow-hidden bg-slate-50">
+    <div className="flex h-dvh overflow-hidden bg-slate-50 dark:bg-slate-950">
       <Sidebar
         conversations={sortedConversations}
         selectedId={selectedConversation.id}

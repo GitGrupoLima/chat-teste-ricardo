@@ -15,7 +15,7 @@ function TypingIndicator() {
   return (
     <div className="flex items-end gap-2" role="status" aria-label="Atendente digitando">
       <AssistantAvatar />
-      <div className="flex gap-1 rounded-2xl rounded-bl-md border border-slate-200 bg-white px-4 py-3.5 shadow-sm">
+      <div className="flex gap-1 rounded-2xl rounded-bl-md border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-3.5 shadow-sm">
         <span className="size-2 animate-bounce rounded-full bg-slate-400" />
         <span className="size-2 animate-bounce rounded-full bg-slate-400 [animation-delay:150ms]" />
         <span className="size-2 animate-bounce rounded-full bg-slate-400 [animation-delay:300ms]" />

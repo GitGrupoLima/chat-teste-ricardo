@@ -31,12 +31,12 @@ export function MessageBubble({ role, text, time }: MessageBubbleProps) {
           className={`rounded-2xl px-4 py-2.5 text-sm leading-relaxed break-words whitespace-pre-wrap shadow-sm ${
             isUser
               ? "rounded-br-md bg-teal-600 text-white"
-              : "rounded-bl-md border border-slate-200 bg-white text-slate-800"
+              : "rounded-bl-md border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200"
           }`}
         >
           {text}
         </div>
-        {time && <span className="mt-1 px-1 text-xs text-slate-400">{time}</span>}
+        {time && <span className="mt-1 px-1 text-xs text-slate-400 dark:text-slate-500">{time}</span>}
       </div>
     </div>
   );

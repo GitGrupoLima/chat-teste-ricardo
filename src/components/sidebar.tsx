@@ -70,11 +70,11 @@ export function Sidebar({
 
       <aside
         aria-label="Conversas"
-        className={`fixed inset-y-0 left-0 z-40 flex w-80 max-w-[85vw] flex-col border-r border-slate-200 bg-white transition-[translate,visibility] duration-200 md:visible md:static md:z-auto md:max-w-none md:translate-x-0 ${
+        className={`fixed inset-y-0 left-0 z-40 flex w-80 max-w-[85vw] flex-col border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-[translate,visibility] duration-200 md:visible md:static md:z-auto md:max-w-none md:translate-x-0 ${
           isOpen ? "visible translate-x-0 shadow-xl md:shadow-none" : "invisible -translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between gap-2 border-b border-slate-200 px-4 py-4">
+        <div className="flex items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-800 px-4 py-4">
           <div className="flex items-center gap-2.5">
             <span
               aria-hidden="true"
@@ -85,8 +85,8 @@ export function Sidebar({
                 <path d="M12 7v5l3 2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </span>
-            <span className="text-base font-semibold tracking-tight text-slate-900">
-              TimeTrack <span className="font-normal text-teal-700">Suporte</span>
+            <span className="text-base font-semibold tracking-tight text-slate-900 dark:text-slate-100">
+              TimeTrack <span className="font-normal text-teal-700 dark:text-teal-300">Suporte</span>
             </span>
           </div>
 
@@ -94,7 +94,7 @@ export function Sidebar({
             type="button"
             onClick={onClose}
             aria-label="Fechar conversas"
-            className="rounded-md p-1.5 text-slate-500 hover:bg-slate-100 hover:text-slate-700 md:hidden"
+            className="rounded-md p-1.5 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-700 dark:hover:text-slate-200 md:hidden"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="size-5">
               <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
@@ -124,7 +124,7 @@ export function Sidebar({
               fill="none"
               stroke="currentColor"
               strokeWidth={2}
-              className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-slate-400"
+              className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-slate-400 dark:text-slate-500"
             >
               <circle cx="11" cy="11" r="7" />
               <path d="m20 20-3.5-3.5" strokeLinecap="round" />
@@ -137,14 +137,14 @@ export function Sidebar({
               onKeyDown={handleSearchKeyDown}
               placeholder="Buscar atendimentos"
               autoComplete="off"
-              className="w-full rounded-lg border border-slate-300 bg-white py-2 pr-9 pl-9 text-sm text-slate-900 placeholder:text-slate-400 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 focus:outline-none [&::-webkit-search-cancel-button]:hidden"
+              className="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 py-2 pr-9 pl-9 text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 focus:outline-none [&::-webkit-search-cancel-button]:hidden"
             />
             {query && (
               <button
                 type="button"
                 onClick={() => setQuery("")}
                 aria-label="Limpar busca"
-                className="absolute top-1/2 right-2 -translate-y-1/2 rounded p-1 text-slate-400 hover:bg-slate-100 hover:text-slate-600"
+                className="absolute top-1/2 right-2 -translate-y-1/2 rounded p-1 text-slate-400 dark:text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-600 dark:hover:text-slate-200"
               >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="size-4">
                   <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
@@ -156,7 +156,7 @@ export function Sidebar({
 
         <nav className="flex-1 overflow-y-auto px-2 pb-4">
           <p
-            className="px-3 pt-3 pb-2 text-xs font-medium tracking-wide text-slate-400 uppercase"
+            className="px-3 pt-3 pb-2 text-xs font-medium tracking-wide text-slate-400 dark:text-slate-500 uppercase"
             aria-live="polite"
           >
             {isSearching
@@ -164,7 +164,7 @@ export function Sidebar({
               : "Conversas recentes"}
           </p>
           {isSearching && visibleConversations.length === 0 && (
-            <p className="px-3 py-6 text-center text-sm text-slate-500">
+            <p className="px-3 py-6 text-center text-sm text-slate-500 dark:text-slate-400">
               Nenhum atendimento encontrado para “{query.trim()}”.
             </p>
           )}

@@ -1,6 +1,18 @@
 @import "tailwindcss";
 
+/* Modo escuro controlado pela classe "dark" no <html> (botão de tema), não só pelo sistema */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+/* Barras de rolagem e campos nativos acompanham o modo */
+:root {
+  color-scheme: light;
+}
+
+:root.dark {
+  color-scheme: dark;
 }

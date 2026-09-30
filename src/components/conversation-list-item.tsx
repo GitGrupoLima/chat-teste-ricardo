@@ -35,13 +35,13 @@ export function ConversationListItem({
       onClick={() => onSelect(conversation.id)}
       aria-current={isSelected ? "true" : undefined}
       className={`flex w-full gap-3 rounded-lg px-3 py-3 text-left transition-colors ${
-        isSelected ? "bg-teal-50 ring-1 ring-inset ring-teal-600/20" : "hover:bg-slate-50"
+        isSelected ? "bg-teal-50 dark:bg-teal-500/10 ring-1 ring-inset ring-teal-600/20" : "hover:bg-slate-50 dark:hover:bg-slate-800/60"
       }`}
     >
       <span
         aria-hidden="true"
         className={`flex size-9 shrink-0 items-center justify-center rounded-full text-sm font-semibold ${
-          conversation.customerName ? "bg-teal-100 text-teal-800" : "bg-slate-100 text-slate-500"
+          conversation.customerName ? "bg-teal-100 dark:bg-teal-500/15 text-teal-800 dark:text-teal-300" : "bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400"
         }`}
       >
         {conversation.customerName ? getInitials(conversation.customerName) : "+"}
@@ -49,12 +49,12 @@ export function ConversationListItem({
 
       <span className="min-w-0 flex-1">
         <span className="flex items-baseline justify-between gap-2">
-          <span className="truncate text-sm font-semibold text-slate-900">{name}</span>
-          <span className="shrink-0 text-xs text-slate-400">
+          <span className="truncate text-sm font-semibold text-slate-900 dark:text-slate-100">{name}</span>
+          <span className="shrink-0 text-xs text-slate-400 dark:text-slate-500">
             {now !== null ? formatRelativeTime(lastActivity, now) : ""}
           </span>
         </span>
-        <span className="mt-0.5 block truncate text-sm text-slate-500">
+        <span className="mt-0.5 block truncate text-sm text-slate-500 dark:text-slate-400">
           {lastMessage?.text ?? "Nenhuma mensagem ainda"}
         </span>
         {conversation.category && (

@@ -41,9 +41,9 @@ export function MessageInput({ onSend }: MessageInputProps) {
   }
 
   return (
-    <div className="border-t border-slate-200 bg-white px-4 py-3 md:px-6">
+    <div className="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-3 md:px-6">
       <form onSubmit={handleSubmit} className="mx-auto max-w-3xl">
-        <div className="flex items-end gap-2 rounded-xl border border-slate-300 bg-white p-2 shadow-sm focus-within:border-teal-500 focus-within:ring-2 focus-within:ring-teal-500/20">
+        <div className="flex items-end gap-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-2 shadow-sm focus-within:border-teal-500 focus-within:ring-2 focus-within:ring-teal-500/20">
           <label htmlFor="message-input" className="sr-only">
             Mensagem
           </label>
@@ -55,17 +55,17 @@ export function MessageInput({ onSend }: MessageInputProps) {
             onChange={(event) => setDraft(event.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Digite sua mensagem…"
-            className="max-h-40 flex-1 resize-none bg-transparent px-2 py-1.5 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none"
+            className="max-h-40 flex-1 resize-none bg-transparent px-2 py-1.5 text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none"
           />
           <button
             type="submit"
             disabled={!canSend}
-            className="rounded-lg bg-teal-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-teal-700 disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-400"
+            className="rounded-lg bg-teal-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-teal-700 disabled:cursor-not-allowed disabled:bg-slate-200 dark:disabled:bg-slate-800 disabled:text-slate-400 dark:disabled:text-slate-500"
           >
             Enviar
           </button>
         </div>
-        <p className="mt-1.5 hidden text-xs text-slate-400 md:block">
+        <p className="mt-1.5 hidden text-xs text-slate-400 dark:text-slate-500 md:block">
           Enter para enviar · Shift+Enter para nova linha
         </p>
       </form>

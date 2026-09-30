@@ -14,7 +14,7 @@ export function EmptyState({ onSuggestionClick }: EmptyStateProps) {
     <div className="flex flex-1 flex-col items-center justify-center overflow-y-auto px-4 py-8">
       <span
         aria-hidden="true"
-        className="flex size-12 items-center justify-center rounded-2xl bg-teal-100 text-teal-700"
+        className="flex size-12 items-center justify-center rounded-2xl bg-teal-100 dark:bg-teal-500/15 text-teal-700 dark:text-teal-300"
       >
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="size-6">
           <path
@@ -24,8 +24,8 @@ export function EmptyState({ onSuggestionClick }: EmptyStateProps) {
           />
         </svg>
       </span>
-      <h2 className="mt-4 text-2xl font-semibold tracking-tight text-slate-900">Como posso ajudar?</h2>
-      <p className="mt-1 text-sm text-slate-500">Escolha uma sugestão ou escreva sua mensagem abaixo.</p>
+      <h2 className="mt-4 text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">Como posso ajudar?</h2>
+      <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">Escolha uma sugestão ou escreva sua mensagem abaixo.</p>
 
       <div className="mt-8 grid w-full max-w-2xl gap-3 sm:grid-cols-2">
         {SUGGESTIONS.map((suggestion) => (
@@ -33,7 +33,7 @@ export function EmptyState({ onSuggestionClick }: EmptyStateProps) {
             key={suggestion}
             type="button"
             onClick={() => onSuggestionClick(suggestion)}
-            className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-left text-sm text-slate-700 shadow-sm transition-colors hover:border-teal-300 hover:bg-teal-50 hover:text-teal-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
+            className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-3 text-left text-sm text-slate-700 dark:text-slate-300 shadow-sm transition-colors hover:border-teal-300 dark:hover:border-teal-700 hover:bg-teal-50 dark:hover:bg-teal-500/10 hover:text-teal-900 dark:hover:text-teal-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
           >
             {suggestion}
           </button>
